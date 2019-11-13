@@ -1,0 +1,41 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>实景照片</title>
+    <style>
+        td{
+            border: 1px solid black;
+        }
+        .body{
+            margin: auto 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="body" >
+<!--    <span th:text="${e.text}">&nbsp;&nbsp;</span>-->
+<!--    <br><br><br>-->
+    <div th:each="img,status : ${e.images}">
+
+        <table>
+            <tr>
+                <td style="text-align: center">
+                    <h4>名称</h4>
+                </td>
+                <td style="text-align: center">
+                    <p class="my-title" th:text="${img.title}"></p>
+                </td>
+            </tr>
+            <br>
+            <tr>
+                <td colspan="2">
+                    <img th:src="${img.src}" alt="..." style="width: 600px" class="my-images"/>
+                </td>
+            </tr>
+        </table>
+        <span th:if="${(status.count)%2==0}" ><br></span>
+    </div>
+</div>
+</body>
+</html>

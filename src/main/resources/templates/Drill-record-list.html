@@ -1,0 +1,89 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>灭火和应急预案演练记录列表</title>
+    <style>
+        td{
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td>
+            演练时间
+        </td>
+        <td th:text="${row.date}"></td>
+        <td>
+            组织部门
+        </td>
+        <td th:text="${row.department}"></td>
+
+    </tr>
+
+    <tr>
+        <td>
+            演练地点
+        </td>
+        <td th:text="${row.address}"></td>
+        <td>
+            演练负责人
+        </td>
+        <td th:text="${row.principal}"></td>
+        </tr>
+    <tr>
+        <td>
+            演练内容
+
+        </td>
+        <td th:text="${row.content}"></td>
+        <td>
+            演练方案
+        </td>
+        <td th:text="row.scheme"></td>
+    </tr>
+
+    <tr>
+        <td>
+            演练情况
+        </td>
+        <td th:text="${row.implementation}"></td>
+
+        <td>
+            演练小结
+        </td>
+        <td th:text="${row.summarize}"></td>
+
+    </tr>
+
+    <tr>
+        <td>
+            改进意见
+        </td>
+        <td th:text="${row.suggest}"></td>
+        <td>
+            记录人签名
+        </td>
+        <td th:text="${row.recordPeople}"></td>
+</tr><tr>
+        <td>
+            消防安全管理人签名
+        </td>
+        <td th:text="${row.fireCustodian}"></td>
+
+    </tr>
+
+</table>
+<div th:each="url : ${urls}">
+        <img style="width: 700px" th:src="${url}" alt="..."/>
+</div>
+
+
+</body>
+</html>

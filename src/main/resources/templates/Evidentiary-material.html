@@ -1,0 +1,42 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>消防重点单位身份证明材料</title>
+    <style>
+        td{
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+<table >
+    <tr>
+        <td >证书名称
+        </td>
+        <td th:text="${row.certname}"></td>
+    </tr>
+<tr>
+    <td >批文编号
+    </td>
+    <td th:text="${row.certno}"></td>
+</tr>
+
+    <tr >
+        <td th:colspan="2">查看图片</td>
+
+
+    </tr>
+    <tr >
+        <td th:colspan="2"><img th:src="${row.filePath}"/></td>
+    </tr>
+</table>
+
+
+
+</body>
+</html>

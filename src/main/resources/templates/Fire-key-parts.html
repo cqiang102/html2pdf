@@ -1,0 +1,96 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>消防重点部位情况</title>
+    <style>
+        td{
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+<table class="table1" ref="pdf">
+    <tr>
+        <td class="td1">建筑面积(㎡)</td>
+        <td class="td2" th:text="${ row.buildArea }"></td>
+        <td class="td3">
+            是否设置
+            <br />
+            禁止类消防标识
+        </td>
+        <td class="td4" th:text="${ row.disableFlag }"></td>
+    </tr>
+    <tr>
+        <td class="td1">安全出口数(个)</td>
+        <td class="td2" th:text="${ row.exits }"></td>
+        <td class="td3">所在位置</td>
+        <td class="td4" th:text="${ row.location }"></td>
+    </tr>
+    <tr>
+        <td class="td1">火种情况</td>
+        <td class="td2" th:text="${ row.fireCase }"></td>
+        <td class="td3">火灾危险性</td>
+        <td class="td4" th:text="${ row.fireDangers }"></td>
+    </tr>
+    <tr>
+        <td class="td1">所属建筑</td>
+        <td class="td2" th:text="${ row.fullpathName }"></td>
+        <td class="td3">
+            消防安全重
+            <br />
+            点部位名称
+        </td>
+        <td class="td4" th:text="${ row.keypartName }"></td>
+    </tr>
+    <tr>
+        <td class="td1">建筑结构</td>
+        <td class="td2" th:text="${ row.structureType }"></td>
+        <td class="td3">使用功能</td>
+        <td class="td4" th:text="${ row.useFunction }"></td>
+    </tr>
+    <tr>
+        <td class="td1">消防电梯数(个)</td>
+        <td class="td2" th:text="${ row.starits }"></td>
+        <td class="td3">所在高度（m）</td>
+        <td class="td4" th:text="${ row.height }"></td>
+    </tr>
+    <tr>
+        <td class="td1">耐火等级</td>
+        <td class="td2" th:text="${ row.refireLevel }"></td>
+        <td class="td3">消防设施</td>
+        <td class="td4" th:text="${ row.equip }"></td>
+    </tr>
+    <tr>
+        <td class="td1">确立原因</td>
+        <td class="td2" th:text="${ row.reason }"></td>
+        <td class="td3">
+            防火标志
+            <br />
+            的设立情况
+        </td>
+        <td class="td4" th:text="${ row.refireFlag }"></td>
+    </tr>
+    <tr>
+
+        <td class="td1">是否设置<br/>提示类消防标识</td>
+        <td class="td2" th:text="${ row.tipsFlag }"></td>
+        <td class="td3">责任人</td>
+        <td class="td4" th:text="${ row.respPerson }"></td>
+    </tr>
+    <tr>
+        <td class="td1">危险源情况</td>
+        <td class="td2" colspan="3" th:text="${ fireResource }"></td>
+    </tr>
+    <tr>
+        <td class="td1">消防安全管理措施</td>
+        <td class="td2" colspan="3" th:text="${ row.mgrMeasures }"></td>
+    </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>消防设施、灭火器材状况</title>
+    <style>
+        td{
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <!-- 室外消防给水 -->
+    <table  >
+        <tr>
+            <td  rowspan="8" style="width: 90px;text-align: center"><br>室<br>外<br>消<br>防<br>给<br>水<br></td>
+            <td  style="width: 500px" >市政给水管数量（条）</td>
+            <td  colspan="5" style="width: 700px;">
+                <th:block  th:text="${jsonEquipInfo.A1}"/>
+            </td>
+        </tr>
+        <tr>
+            <td  style="width: 500px" >市政给水管管径（mm）</td>
+            <td  colspan="5">
+                <th:block   th:text="${jsonEquipInfo.A2}"/>
+            </td>
+        </tr>
+        <tr>
+            <td  style="width: 500px">室外水池容量（m3）</td>
+            <td  colspan="5">
+                <th:block      th:text="${jsonEquipInfo.A3}"/>
+            </td>
+        </tr>
+        <tr>
+            <td  style="width: 500px">室外环网管径 （mm）</td>
+            <td  colspan="5">
+                <th:block      th:text="${jsonEquipInfo.A4}"/>
+            </td>
+        </tr>
+        <tr>
+            <td  style="width: 500px">室外消火栓数量（个）</td>
+            <td  colspan="5">
+                <th:block      th:text="${jsonEquipInfo.A5}"/>
+            </td>
+        </tr>
+        <tr>
+            <td  style="width: 500px">管网供水状态</td>
+            <td  colspan="5">
+                <th:block    th:text="${jsonEquipInfo.A6}"/>
+            </td>
+        </tr>
+        <tr>
+            <td  style="width: 500px">可供消防车取水的天然水源情况</td>
+            <td  colspan="5">
+                <th:block    th:text="${jsonEquipInfo.A7}"/>
+            </td>
+        </tr>
+        <tr>
+            <td  style="width: 500px" >责任部门</td>
+            <td  colspan="2">
+                <th:block    th:text="${jsonEquipInfo.A8}"/>
+            </td>
+
+            <td class="td5 table-title">责任人</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.A9}"/>
+            </td>
+        </tr>
+    </table>
+    <!-- 室内消火栓系统 -->
+    <table class="table1" >
+        <tr>
+            <td  rowspan="11"  style="width: 180px;text-align: center"><br>室<br>内<br>消<br>火<br>栓<br>系<br>统<br></td>
+            <td style="width: 400px">设置部位</td>
+            <td  colspan="5"  style="width: 700px">
+                <th:block    th:text="${jsonEquipInfo.B1}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">室内消火栓数量</td>
+            <td class="td3" colspan="2">
+                <th:block      th:text="${jsonEquipInfo.B2}"/>
+            </td>
+
+            <td class="td5 table-title" style="width: 500px">消防泵设置部位</td>
+            <td class="td6" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.B3}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">消防泵数量</td>
+            <td class="td3">
+                <th:block    th:text="${jsonEquipInfo.B4}"  />
+            </td>
+            <td class="td4 table-title" style="width: 400px">流量（L/S）</td>
+            <td class="td5" style="width: 400px">
+                <th:block    th:text="${jsonEquipInfo.B5}"  />
+            </td>
+            <td class="td6 table-title" style="width: 400px">扬程（m）</td>
+            <td class="td7" style="width: 400px">
+                <th:block    th:text="${jsonEquipInfo.B6}"  />
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">接合器数量（个）</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.B7}"  />
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">屋顶水箱容量（m3）</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.B8}"  />
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">竖管管径（m）</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.B9}"  />
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">稳压泵数量</td>
+            <td class="td3" style="width: 400px">
+                <th:block    th:text="${jsonEquipInfo.B10}"  />
+            </td>
+            <td class="td4 table-title" style="width: 400px">流量（L/S）</td>
+            <td class="td5" style="width: 400px">
+                <th:block    th:text="${jsonEquipInfo.B11}"  />
+            </td>
+            <td class="td6 table-title" style="width: 400px">扬程（m）</td>
+            <td class="td7" style="width: 400px">
+                <th:block    th:text="${jsonEquipInfo.B12}"  />
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">消防水喉数量（个）</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.B13}"  />
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">系统状态</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.B14}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">责任部门</td>
+            <td class="td3" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.B15}"/>
+            </td>
+
+            <td class="td5 table-title" >责任人</td>
+            <td class="td6" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.B16}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">维修保养单位</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.B17}"/>
+            </td>
+        </tr>
+    </table>
+    <!-- 自动喷水灭火系统 -->
+    <table class="table1" >
+        <tr>
+            <td  style="width: 90px;text-align: center"  rowspan="12"><br>自<br>动<br>喷<br>水<br>灭<br>火<br>系<br>统<br></td>
+            <td style="width: 400px">设置部位</td>
+            <td  colspan="5"  style="width: 700px">
+                <th:block    th:text="${jsonEquipInfo.C1}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">喷淋泵设置部位</td>
+            <td class="td3" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.C2}"/>
+            </td>
+
+            <td class="td5 table-title">报警阀数（个）</td>
+            <td class="td6" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.C3}"  />
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">水流指示器数（个）</td>
+            <td class="td3" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.C4}"  />
+            </td>
+
+            <td class="td5 table-title">喷头数（个）</td>
+            <td class="td6" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.C5}"  />
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">水泵接合器数（个）</td>
+            <td class="td3" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.C6}"  />
+            </td>
+
+            <td class="td5 table-title">喷头数（个）</td>
+            <td class="td6" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.C7}"  />
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">减压阀数（个）</td>
+            <td class="td3" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.C8}"  />
+            </td>
+
+            <td class="td5 table-title">竖向分区（个）</td>
+            <td class="td6" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.C9}"  />
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">喷淋泵数（个）</td>
+            <td class="td3">
+                <th:block    th:text="${jsonEquipInfo.C10}"  />
+            </td>
+            <td class="td4 table-title">流量（L/S）</td>
+            <td class="td5">
+                <th:block    th:text="${jsonEquipInfo.C11}"  />
+            </td>
+            <td class="td6 table-title">扬程（m）</td>
+            <td class="td7">
+                <th:block    th:text="${jsonEquipInfo.C12}"  />
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">稳压泵量（个）</td>
+            <td class="td3">
+                <th:block    th:text="${jsonEquipInfo.C13}"/>
+            </td>
+            <td class="td4 table-title">流量（L/S）</td>
+            <td class="td5">
+                <th:block    th:text="${jsonEquipInfo.C14}"/>
+            </td>
+            <td class="td6 table-title">扬程（m）</td>
+            <td class="td7">
+                <th:block    th:text="${jsonEquipInfo.C15}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">屋顶水箱容量（m3）</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.C16}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">系统形式</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.C17}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">系统状态</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.C18}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">责任部门</td>
+            <td class="td3" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.C19}"/>
+            </td>
+
+            <td class="td5 table-title">责任人</td>
+            <td class="td6" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.C20}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">维修保养单位</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.C21}"/>
+            </td>
+        </tr>
+    </table>
+    <br><br><br><br><br><br><br>
+    <!-- 气体灭火 -->
+    <table class="table1" >
+        <tr>
+            <td   style="width: 90px;text-align: center" rowspan="11"><br>气<br>体<br>灭<br>火<br></td>
+            <td style="width: 400px">设置部位</td>
+            <td  colspan="5"  style="width: 700px">
+                <th:block    th:text="${jsonEquipInfo.D1}"/>
+            </td>
+        </tr>
+        <tr>
+            <td  style="width: 400px">药剂种类</td>
+            <td  colspan="2">
+                <th:block    th:text="${jsonEquipInfo.D2}"/>
+            </td>
+
+            <td class="td5 table-title">灭火形式</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.D3}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">系统形式</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.D4}"/>
+            </td>
+
+            <td class="td5 table-title">瓶库位置</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.D5}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">钢瓶（一）数量（只）</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.D6}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">钢瓶（二）数量（只）</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.D7}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">系统状态</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.D8}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">动作方式</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.D9}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">责任部门及责任人</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.D10}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">维修保养单位</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.D11}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">防护区部位1</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.D12}"/>
+            </td>
+
+            <td class="td5 table-title">防护区容积1(m3)</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.D13}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">防护区部位2</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.D14}"/>
+            </td>
+
+            <td class="td5 table-title">防护区容积2(m3)</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.D15}"/>
+            </td>
+        </tr>
+    </table>
+
+    <!-- 火灾自动报警系统 -->
+    <table class="table1" >
+        <tr>
+            <td  rowspan="10"  style="width: 90px;text-align: center"><br>火<br>灾<br>自<br>动<br>报<br>警<br>系<br>统<br></td>
+            <td  style="width: 400px">设置部位</td>
+            <td  colspan="5"  style="width: 700px">
+                <th:block    th:text="${jsonEquipInfo.E1}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">消防控制室设置位置</td>
+            <td class="td3" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.E2}"/>
+            </td>
+
+            <td class="td5 table-title">系统形式</td>
+            <td class="td6" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.E3}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">报警控制器型号</td>
+            <td class="td3">
+                <th:block    th:text="${jsonEquipInfo.E4}"/>
+            </td>
+            <td class="td4 table-title">数量（台）</td>
+            <td class="td5">
+                <th:block    th:text="${jsonEquipInfo.E5}"/>
+            </td>
+            <td class="td6 table-title">生产厂</td>
+            <td class="td7">
+                <th:block    th:text="${jsonEquipInfo.E6}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">联动控制器型号</td>
+            <td class="td3">
+                <th:block    th:text="${jsonEquipInfo.E7}"/>
+            </td>
+            <td class="td4 table-title">数量（台）</td>
+            <td class="td5">
+                <th:block    th:text="${jsonEquipInfo.E8}"/>
+            </td>
+            <td class="td6 table-title">生产厂</td>
+            <td class="td7">
+                <th:block    th:text="${jsonEquipInfo.E9}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">手动报警型号</td>
+            <td class="td3">
+                <th:block    th:text="${jsonEquipInfo.E10}"/>
+            </td>
+            <td class="td4 table-title">数量（台）</td>
+            <td class="td5">
+                <th:block    th:text="${jsonEquipInfo.E11}"/>
+            </td>
+            <td class="td6 table-title">生产厂</td>
+            <td class="td7">
+                <th:block    th:text="${jsonEquipInfo.E12}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">手动报警型号</td>
+            <td class="td3">
+                <th:block    th:text="${jsonEquipInfo.E13}"/>
+            </td>
+            <td class="td4 table-title">数量（台）</td>
+            <td class="td5">
+                <th:block    th:text="${jsonEquipInfo.E14}"/>
+            </td>
+            <td class="td6 table-title">生产厂</td>
+            <td class="td7">
+                <th:block    th:text="${jsonEquipInfo.E15}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">系统状态（单选）</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.E16}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">责任部门</td>
+            <td class="td3" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.E17}"/>
+            </td>
+
+            <td class="td5 table-title">责任人</td>
+            <td class="td6" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.E18}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">维修保养单位</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.E19}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">其他需要说明的情况</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.E20}"/>
+            </td>
+        </tr>
+    </table>
+    <!-- 排烟系统 -->
+    <table class="table1" >
+        <tr>
+            <td  style="width: 90px;text-align: center" rowspan="8"><br>排<br>烟<br>系<br>统<br></td>
+            <td   style="width: 400px">设置部位</td>
+            <td  colspan="5"  style="width: 700px">
+                <th:block    th:text="${jsonEquipInfo.F1}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">排烟风机数量（只）</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.F2}"/>
+            </td>
+
+            <td class="td5 table-title">风机安装位置</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.F3}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">风机类型</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.F4}"/>
+            </td>
+
+            <td class="td5 table-title">风口设置部位</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.F5}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">风机风量（m3/h）</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.F6}"/>
+            </td>
+
+            <td class="td5 table-title">风口设置部位</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.F7}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">动作方式</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.F8}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">责任部门及责任人</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.F9}"/>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="td2" style="width: 400px">维修保养单位</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.F10}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">排烟设施类型</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.F11}"/>
+            </td>
+        </tr>
+    </table>
+
+    <!-- 防烟系统 -->
+    <table class="table1" >
+        <tr>
+            <td  style="width: 90px;text-align: center" rowspan="8"><br>防<br>烟<br>系<br>统<br></td>
+            <td  style="width: 400px">设置部位</td>
+            <td  colspan="5"  style="width: 700px">
+                <th:block    th:text="${jsonEquipInfo.G1}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">正压风机数量（只）</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.G2}"/>
+            </td>
+
+            <td class="td5 table-title">风机安装位置</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.G3}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">风机类型</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.G4}"/>
+            </td>
+
+            <td class="td5 table-title">风口设置部位</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.G5}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">风机风量（m3/h）</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.G6}"/>
+            </td>
+
+            <td class="td5 table-title">系统状态</td>
+            <td class="td24" colspan="2">
+                <th:block    th:text="${jsonEquipInfo.G7}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">动作方式</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.G8}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">责任部门及责任人</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.G9}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">维修保养单位</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.G10}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">防烟设施类型</td>
+            <td class="td3" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.G11}"/>
+            </td>
+        </tr>
+    </table>
+    <!-- 其他系统 -->
+    <table class="table1" >
+        <tr>
+            <td  style="width: 90px;text-align: center" rowspan="5"><br>其<br>他<br>系<br>统<br></td>
+            <td  style="width: 400px">系统名称</td>
+            <td  style="width: 700px" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.H1}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2"  style="width: 400px">设置部位</td>
+            <td class="td64" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.H2}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">系统状态</td>
+            <td class="td64" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.H3}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">责任人及责任单位</td>
+            <td class="td64" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.H4}"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" style="width: 400px">维修保养单位</td>
+            <td class="td64" colspan="5">
+                <th:block    th:text="${jsonEquipInfo.H5}"/>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本概述</title>
+    <style>
+        /*body {*/
+        /*    font-family: SimSun,serif;*/
+        /*}*/
+
+        .pos {
+            position: absolute;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div class="pos">
+    <table >
+        <tr style="text-align: center;">
+            <td colspan="4">
+                <div><b>单位主体信息</b></div>
+            </td>
+        </tr>
+        <tr>
+            <td>单位编码：</td>
+            <td th:text="${e.unitCode}">"></td>
+            <td>组织机构代码：</td>
+            <td th:text="${e.orgCode}">"></td>
+        </tr>
+        <tr>
+            <td>单位名称：</td>
+            <td th:text="${e.unitName}">"></td>
+            <td>使用名称：</td>
+            <td th:text="${e.realName}">"></td>
+        </tr>
+        <tr>
+            <td>单位地址：</td>
+            <td th:text="${e.address}">"></td>
+            <td>法定代表人电话：</td>
+            <td th:text="${e.legalTel}">"></td>
+        </tr>
+        <tr>
+            <td>法定代表人：</td>
+            <td th:text="${e.legalName}">"></td>
+            <td>法定代表人身份证：</td>
+            <td th:text="${e.legalIdcard}">"></td>
+        </tr>
+        <tr>
+            <td>单位类型：</td>
+            <td th:text="${e.unitType}">"></td>
+            <td>单位其他情况：</td>
+            <td th:text="${e.unitOther}">"></td>
+        </tr>
+        <tr>
+            <td>上级单位：</td>
+            <td th:text="${e.mangerUnit}">"></td>
+            <td>邮政编码：</td>
+            <td th:text="${e.postCode}">"></td>
+        </tr>
+        <tr>
+            <td>单位电话：</td>
+            <td th:text="${e.telephone}">"></td>
+            <td>单位传真：</td>
+            <td th:text="${e.fax}">"></td>
+        </tr>
+        <tr>
+            <td>E-Mail：</td>
+            <td th:text="${e.email}">"></td>
+            <td>营业时最大人数：</td>
+            <td th:text="${e.maxpersons}">"></td>
+        </tr>
+        <tr>
+            <td>经济所有制：</td>
+            <td th:text="${e.ownershipType}">"></td>
+            <td>单位成立时间：</td>
+            <td th:text="${e.setupDate}">"></td>
+        </tr>
+        <tr>
+            <td>行政区域(区域名称)：</td>
+            <td th:text="${e.fullpathName}">"></td>
+            <td>消防管辖：</td>
+            <td th:text="${e.fireRange}">"></td>
+        </tr>
+        <tr>
+            <td>所属行业：</td>
+            <td th:text="${e.industryId}">"></td>
+            <td>火灾危险性：</td>
+            <td th:text="${e.fireDanger}">"></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td><b>消防负责人联系方式：</b></td>
+            <td><b>姓名</b></td>
+            <td><b>联系电话</b></td>
+            <td><b>身份证</b></td>
+        </tr>
+        <tr>
+            <td>消防安全管理人</td>
+            <td th:text="${e.userName_1}">"></td>
+            <td th:text="${e.telephone_1}">"></td>
+            <td th:text="${e.idcard_1}">"></td>
+        </tr>
+        <tr class="page">
+            <td>消防安全责任人</td>
+            <td th:text="${e.userName}">"></td>
+            <td th:text="${e.telephone}">"></td>
+            <td th:text="${e.idcard}">"></td>
+        </tr>
+        <tr style="text-align: center;">
+            <td colspan="4">
+                <div><b>单位主建筑信息</b></div>
+            </td>
+        </tr>
+        <tr>
+            <td>建筑结构：</td>
+            <td th:text="${e.buildingType}">"></td>
+            <td>耐火等级：</td>
+            <td th:text="${e.defireLevel}">"></td>
+        </tr>
+        <tr>
+            <td>建筑面积（㎡）：</td>
+            <td th:text="${e.area}">"></td>
+            <td>建筑高度（m）：</td>
+            <td th:text="${e.buildingHeight}">"></td>
+        </tr>
+        <tr>
+            <td>建筑楼层（层）：</td>
+            <td th:text="${e.floors}">"></td>
+            <td>安全出口（个）：</td>
+            <td th:text="${e.exitnums}">"></td>
+        </tr>
+        <tr>
+            <td>疏散楼梯（个）：</td>
+            <td th:text="${e.stairs}">"></td>
+            <td>疏散标识（个）：</td>
+            <td th:text="${e.evacuateEmergencyLights}">"></td>
+        </tr>
+        <tr>
+            <td>消防电梯（个）：</td>
+            <td th:text="${e.stairnums}">"></td>
+            <td>疏散应急灯（个）：</td>
+            <td th:text="${e.evacuationSigns}">"></td>
+        </tr>
+        <tr>
+            <td>消防应急车道（个）：</td>
+            <td th:text="${e.fireagentnums}">"></td>
+            <td>重点部位（所在高度）：</td>
+            <td th:text="${e.keypart}">"></td>
+        </tr>
+        <tr>
+            <td>自动消防设施：</td>
+            <td th:text="${e.autoequpFlag}">"></td>
+            <td>避难所楼层（层）：</td>
+            <td th:text="${e.shelterFloor}">"></td>
+        </tr>
+        <tr>
+            <td>燃气类型：</td>
+            <td th:text="${e.gasType}">"></td>
+            <td>避难所面积（㎡）：</td>
+            <td th:text="${e.shelterArea}">"></td>
+        </tr>
+        <tr>
+            <td>储备仓库：</td>
+            <td th:text="${e.reserveWarehouse}">"></td>
+            <td>仓库位置：</td>
+            <td th:text="${e.warehouseLocation}">"></td>
+        </tr>
+        <tr>
+            <td>危险物品：</td>
+            <td th:text="${e.dangerousGoods}">"></td>
+            <td>消防控制室位置：</td>
+            <td th:text="${e.controlRoom}">"></td>
+        </tr>
+        <tr>
+            <td>消防控制室面积（㎡）：</td>
+            <td th:text="${e.controlArea}">"></td>
+            <td>疏散楼梯宽度（m）：</td>
+            <td th:text="${e.stairsWidth}">"></td>
+        </tr>
+        <tr>
+            <td>微型消防站（个）：</td>
+            <td th:text="${e.microFirestation}">"></td>
+            <td>灭火器数量（个）：</td>
+            <td th:text="${e.firerNums}">"></td>
+        </tr>
+        <tr>
+            <td>防火门型号：</td>
+            <td th:text="${e.fireDoorType}">"></td>
+            <td>防火门数量（个）：</td>
+            <td th:text="${e.fireDoorQuantity}">"></td>
+        </tr>
+        <tr>
+            <td>防火卷帘门型号：</td>
+            <td th:text="${e.fireShutterDoor}">"></td>
+            <td>防火卷帘门数量（个）：</td>
+            <td th:text="${e.fireShutterDoors}">"></td>
+        </tr>
+    </table>
+</div>
+
+
+</body>
+</html>

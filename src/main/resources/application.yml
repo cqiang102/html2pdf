@@ -1,0 +1,15 @@
+spring:
+  thymeleaf:
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+  application:
+    name: html2pdf
+server:
+  port: 8888
+
+user:
+  host: http://127.0.0.1:8088/pdf
+  resources: C:\

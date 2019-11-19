@@ -1,0 +1,463 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>消防重点单位申请表</title>
+    <style>
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div >
+    <table cellpadding="0">
+
+        <tr>
+            <td class="td1">单位名称：</td>
+            <td class="td2" th:text="${e.unitName}"></td>
+            <td class="td1">单位电话：</td>
+            <td class="td2" th:text="${e.telephone}"></td>
+        </tr>
+        <tr>
+            <td class="td1">单位地址：</td>
+            <td class="td2" th:text="${e.address}"></td>
+            <td class="td1">邮政编码：</td>
+            <td class="td2" th:text="${e.email}"></td>
+        </tr>
+        <tr>
+            <td rowspan="30" style="width: 50px;text-align: center;">
+                申
+                <br></br>
+                <br></br>
+                报
+                <br></br>
+                <br></br>
+                单
+                <br></br>
+                <br></br>
+                位
+                <br></br>
+                <br></br>
+                属
+                <br></br>
+                <br></br>
+                性
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" >
+                一、商场（市场）、宾馆（饭店）、体育场（馆）、会堂、公共娱乐场所等公众聚集场所
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <th:block th:text="${e.v.num1}"/>
+                1、建筑面积≥1000㎡经营可燃商品的商店、市场<br></br>
+                <th:block th:text="${e.v.num2}"/>
+                2、客房50间以上的旅馆、饭店<br></br>
+                <th:block th:text="${e.v.num3}"/>
+                3、公共的体育（场）馆、会堂<br></br>
+                <th:block th:text="${e.v.num4}"/>
+                4、就餐位在300座以上或就餐营业面积≥500m2的餐饮场所<br></br>
+                <th:block th:text="${e.v.num5}"/>
+                5、机位在100台以上的网吧<br></br>
+                <th:block th:text="${e.v.num6}"/>
+                6、场所建筑面积≥200m2的歌舞、游艺、放映、休闲等公共娱乐场所<br></br>
+                <th:block th:text="${e.v.num7}"/>
+                7、设在地下建筑内的公众聚集场所<br></br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" >
+                二、医院、养老院和寄宿制的学校、托儿所、幼儿园
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <th:block th:text="${e.q.num8}"/>
+                1、住院床位50张以上医院<br></br>
+                <th:block th:text="${e.q.num9}"/>
+                2、老人住宿床位50张以上养老院<br></br>
+                <th:block th:text="${e.q.num10}"/>
+                3、学生住宿床位数100张以上的学校<br></br>
+                <th:block th:text="${e.q.num11}"/>
+                4、幼儿园住宿床（铺）位在50张以上的托儿所、幼儿园<br></br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" >
+                三、国家机关
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <th:block th:text="${e.w.num12}"/>
+                1、县级以上的党委、人大、政府、政协<br></br>
+                <th:block th:text="${e.w.num13}"/>
+                2、县级以上检察院、法院<br></br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" >
+                四、广播、电视和邮政、通信枢纽
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <th:block th:text="${e.e.num14}"/>
+                1、广播电台、电视台<br></br>
+                <th:block th:text="${e.e.num15}"/>
+                2、城镇的邮政和通信枢纽单位
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" >
+                五、客运车站、码头、民用机场
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <th:block th:text="${e.r.num16}"/>
+                1、候车厅、候船厅的建筑面积≥500㎡的客运车站、码头<br></br>
+                <th:block th:text="${e.r.num17}"/>
+                2、民用机场<br></br>
+            </td>
+        </tr>
+
+    </table>
+    <br><br><br><br>
+    <table cellpadding="0">
+
+        <tr>
+            <td rowspan="15" style="width: 90px;text-align: center;">
+                申
+                <br></br>
+                <br></br>
+                报
+                <br></br>
+                <br></br>
+                单
+                <br></br>
+                <br></br>
+                位
+                <br></br>
+                <br></br>
+                属
+                <br></br>
+                <br></br>
+                性
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4"  style="width: 700px">
+                六、公共图书馆、展览馆、博物馆、档案馆以及具有火灾危险性的文物保护单位
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+
+                <th:block th:text="${e.t.num19}"/>
+                2、公共博物馆、档案馆<br></br>
+                <th:block th:text="${e.t.num18}"/>
+                1、建筑面积≥2000 ㎡的公共图书馆、展览馆<br></br>
+                <th:block th:text="${e.t.num20}"/>
+                3、具有火灾危险性的县级以上文物保护单位<br></br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" >
+                七、发电厂(站)和电网经营企业
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <th:block th:text="${e.y.num21}"/>
+                1、发电厂(站)<br></br>
+                <th:block th:text="${e.y.num22}"/>
+                2、县以上供电公司<br></br>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="4" >
+                八、易燃易爆化学物品的生产、充装、储存、供应、销售单位
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <th:block th:text="${e.u.num23}"/>
+                1、生产易燃易爆化学物品的工厂<br></br>
+                <th:block th:text="${e.u.num24}"/>
+                2、易燃易爆气体和液体的灌装站、调压站、气化站、混气站经营管理单位<br></br>
+                <th:block th:text="${e.u.num25}"/>
+                3、易燃易爆化学物品的专业储存单位（仓库、堆场、储罐场所）<br></br>
+                <th:block th:text="${e.u.num26}"/>
+                4、营业性汽车加油站、加气站、液化石油气供应站（换瓶站）<br></br>
+                <th:block th:text="${e.u.num27}"/>
+                5、经营甲、乙类易燃易爆化学物品且建筑面积大于等于50㎡的商店<br></br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" >
+                九、劳动密集型生产、加工企业
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <th:block th:text="${e.o.num28}"/>
+                1、生产车间员工100人以上的服装、鞋帽、玩具等劳动密集型企业<br></br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" >
+                十、重要的科研单位
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <th:block th:text="${e.p.num29}"/>
+                1、省级以上科研单位<br></br>
+                <th:block th:text="${e.p.num30}"/>
+                2、设备总价值在5000万元以上的科研单位<br></br>
+                <th:block th:text="${e.p.num31}"/>
+                3、科研试验中具有较大火灾爆炸危险性的科研单位 <br>
+
+            </td>
+        </tr>
+
+    </table>
+    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
+    <table>
+        <tr>
+            <td rowspan="5" style="width: 90px;text-align: center;">
+                申
+                <br></br>
+                <br></br>
+                报
+                <br></br>
+                <br></br>
+                单
+                <br></br>
+                <br></br>
+                位
+                <br></br>
+                <br></br>
+                属
+                <br></br>
+                <br></br>
+                性
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"  style="width: 700px">
+                十一、高层公共建筑、地下铁道、地下观光隧道、粮、棉、木材、百货等物资仓库和堆场
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <th:block th:text="${e.h.num32}"/>
+                1、高层公共建筑的办公楼（写字楼）、公寓楼等<br></br>
+                <th:block th:text="${e.h.num33}"/>
+                2、城市地下铁道、地下观光隧道等地下公共建筑和城市重要交通隧道<br></br>
+                <th:block th:text="${e.h.num34}"/>
+                3、国家储备粮库、总储量在10000吨以上的其他粮库<br></br>
+                <th:block th:text="${e.h.num35}"/>
+                4、总储量在500吨以上的棉库<br></br>
+                <th:block th:text="${e.h.num36}"/>
+                5、总储量在10000M3的以上的木材堆场<br></br>
+                <th:block th:text="${e.h.num37}"/>
+                6、总储量在1000万元以上的可燃物品仓库、堆场<br></br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" >
+                十二、其他发生火灾可能性较大以及一旦发生火灾可能造成人身重大伤亡财产重大损失单位
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <th:block th:text="${e.k.num38}"/>
+                1、固定资产价值在1亿元以上的丙、丁类企业<br></br>
+                <th:block th:text="${e.k.num39}"/>
+                2、营业厅（室）建筑面积彡500m2的证券、期货等交易场所<br></br>
+                <th:block th:text="${e.k.num40}"/>
+                3、市（地）级以上报社<br></br>
+                <th:block th:text="${e.k.num41}"/>
+                4、支行级以上银行<br></br>
+                <th:block th:text="${e.k.num42}"/>
+                5、使用易燃易爆化学物品且储存量在10吨以上的单位<br></br>
+                <th:block th:text="${e.k.num43}"/>
+                6、易燃易爆化学物品专业运输单位<br></br>
+                <th:block th:text="${e.k.num44}"/>
+                7、车位在50辆以上的汽车库和车位在100辆以上的停车场以及修理停车位在10辆以上的汽车修理<br></br>
+                <th:block th:text="${e.k.num45}"/>
+                8、重要的旅游风景点<br></br>
+                <th:block th:text="${e.k.num46}"/>
+                9、其他具有较大火灾危险性或发生火灾后可能造成重大危害的单位<br></br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">备注：<br>
+                <th:block th:text="${e.textarea}"/>
+                <br /></td>
+
+        </tr>
+    </table>
+    <br><br><br><br><br><br>
+    <table >
+
+        <tr>
+            <td rowspan="4" style="width: 90px;text-align: center;">
+                <br><br>消<br></br><br></br>防<br></br><br></br>审<br></br><br></br>批
+            </td>
+            <td style="width: 700px">审批情况： <br>
+                &nbsp;&nbsp;<th:block th:text="${e.radiofire_0.radiofire_f1}"/>
+                1、未审核 <br>
+                &nbsp;&nbsp;<th:block th:text="${e.radiofire_0.radiofire_f2}"/>
+                2、经审核不合格 <br>
+                &nbsp;&nbsp;<th:block th:text="${e.radiofire_0.radiofire_f3}"/>
+                3、审核合格 <br>
+                &nbsp;&nbsp;文号：
+                <th:block th:text="${e.wenhao}"/>
+            </td>
+        </tr>
+        <tr>
+            <td >验收情况： <br>
+                &nbsp;&nbsp;<th:block th:text="${e.radiofire_1.radiofire_f4}"/>
+                1、未审核 <br>
+                &nbsp;&nbsp;<th:block th:text="${e.radiofire_1.radiofire_f5}"/>
+                2、经审核不合格 <br>
+                &nbsp;&nbsp;<th:block th:text="${e.radiofire_1.radiofire_f6}"/>
+                3、审核合格 <br>
+                &nbsp;&nbsp;文号：
+                <th:block th:text="${e.wenhao1}"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>开业前检查：<br>
+                &nbsp;&nbsp;<th:block th:text="${e.radiofire_2.radiofire_f7}"/>
+                1、未经检查 <br>
+                &nbsp;&nbsp;<th:block th:text="${e.radiofire_2.radiofire_f8}"/>
+                2、经检查不合格 <br>
+                &nbsp;&nbsp;<th:block th:text="${e.radiofire_2.radiofire_f9}"/>
+                3、检查合格 <br>
+                &nbsp;&nbsp;文号：
+                <th:block th:text="${e.wenhao2}"/>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td rowspan="10" style="width: 90px;text-align: center;">
+                消<br/><br/>防<br/><br/>设<br/><br/>施
+            </td>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw1 }"/>
+                火灾自动报警系统
+            </td>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw2 }"/>
+                自动喷水灭火系统
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw3 }"/>
+                泡沬灭火系统
+            </td>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw4 }"/>
+                气体灭火系统
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw5 }"/>
+                干粉灭火系统
+            </td>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw6 }"/>
+                细水雾灭火系统
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw7 }"/>
+                排烟系统
+            </td>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw8 }"/>
+                防烟系统
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw9 }"/>
+                室内消防给水系统
+            </td>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw10}"/>
+                室外消防给水系统
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw11}"/>
+                疏散指示标志和应急照明
+            </td>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw12}"/>
+                消防供电配电
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw13}"/>
+                火灾应急广播系统
+            </td>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw14}"/>
+                消防电梯
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw15}"/>
+                其他系统
+            </td>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw16}"/>
+                防火分隔
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw17}"/>
+                灭火器
+            </td>
+            <td style="width: 350px">
+                <th:block th:text="${e.sw18}"/>
+                控制室联动控制设备功能
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="width: 700px">
+                <th:block th:text="${e.sw19}"/>
+                其他设施
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

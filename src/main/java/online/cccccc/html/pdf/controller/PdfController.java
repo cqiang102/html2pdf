@@ -184,7 +184,7 @@ public class PdfController {
         templates = templates.replaceFirst("/","");
 
         //生成pdf文件
-        String string = UUID.randomUUID().toString()+"###"+System.currentTimeMillis();
+        String string = UUID.randomUUID().toString()+"+++"+System.currentTimeMillis();
         File pdfDest = new File(resources+string+".pdf");
 
         ConverterProperties converterProperties = new ConverterProperties();
